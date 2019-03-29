@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Painel da VIFUG, com informações da SUFUG - FGTS.CAIXA">
+        <title>CEOPC</title>
+
+        <base href="<?=base_url()?>">
+
+        <link href="assets/img/favicon.ico" rel="shortcut icon">
+        <!-- <link href="assets/third-party/bootstrap/css/bootstrap.min.css?v=<?=filemtime('assets/third-party/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet"/> -->
+        <link href="assets/third-party/bootstrap4/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="assets/third-party/font-awesome/css/font-awesome.min.css?v=<?=filemtime('assets/third-party/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet"/>
+        <link href="assets/third-party/simple-line-icons/css/simple-line-icons.css?v=<?=filemtime('assets/third-party/simple-line-icons/css/simple-line-icons.css')?>" rel="stylesheet"/>
+        <link href="assets/css/shared/spinner.css?v=<?=filemtime('assets/css/shared/spinner.css')?>" rel="stylesheet"/>
+        <link href="assets/css/shared/breadcrumb.css?v=<?=filemtime('assets/css/shared/breadcrumb.css')?>" rel="stylesheet"/>
+        <link href="assets/css/shared/site.css?v=<?=filemtime('assets/css/shared/site.css')?>" rel="stylesheet"/>
+        <link href="assets/css/painel/index.css?v=<?=filemtime('assets/css/painel/index.css')?>" rel="stylesheet"/>
+    </head>
+
+    <body>
+
+        <header calss="site-header">
+            <div class="toggler" id='toggler'>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <span class="titulo-header-cinza">CEOPC.</span><span class="titulo-header-laranja">SISTEMAS</span>
+        </header>
+
+        <main>
+            
+            <div class="toggle-menu">
+
+                <div class="menu-filter">
+                    <div class="group">
+                        <input type="text" id="menuFilter" placeholder="Filtrar no menu">
+                        <span class="group-add" id="menuFilterButton">
+                            <i class="icon-magnifier"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="menu-filter-fechado">                    
+                    <i class="icon-magnifier"></i>
+                </div>
+
+                 <ul id="lateral-menu">
+                    <li class="nav-item">
+                        <a href="">
+                            <i class="fa fa-home"></i><span class="title">Página Inicial</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="j" class="painel-consolidado">
+                            <i class="fa fa-signal"></i><span class="title">Painel Consolidado</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="toggle-item">
+                            <i class="fa fa-info-circle"></i><span class="title">Informações</span><i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul>
+                            <li class="nav-item"><a href="" target="_blank"><i class="fa fa-pie-chart"></i><span class="title">Grandes Números</span></a></li>
+                            <li class="nav-item"><a href="" target="_blank"><i class="fa fa-dollar"></i><span class="title">Execução</span></a></li>
+                            <li class="nav-item"><a href="" target="_blank"><i class="fa fa-file-text-o"></i><span class="title">Contratações</span></a></li>
+                            <li class="nav-item"><a href="" target="_blank"><i class="fa fa-line-chart"></i><span class="title">Retorno Financiamentos</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="estrutura-sufug">
+                            <i class="fa fa-users"></i><span class="title">Estrutura</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="indicadores">
+                            <i class="fa fa-file-pdf-o"></i><span class="title">Indicadores e Relatórios</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            
+            <div class="conteudo">
+
+                <div class="page-bar"></div>
+
+                <div class="conteudo-dados">
+
+                    <div class="conteudo-wrapper ">
+
+                        <!-- linha 1 -->
+
+                        <div class="cards-primeira-linha"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="detalhesPrimeiraLinha"></div>                        
+
+                        <!-- linha 2 -->
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="portlet">
+                                <div class="portlet-title">
+                                    <i class="fa fa-info-circle"></i> INFORMAÇÕES
+                                </div>
+
+                                <div class="portlet-body">
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <a href="" target="_blank" class="card card-link">
+                                            <div class="nome-link link-linha-1">Grandes<br>Números</div>                                
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <a href="" target="_blank" class="card card-link">
+                                            <div class="nome-link link-linha-2">Execução</div>                                
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <a href="" target="_blank" class="card card-link">
+                                            <div class="nome-link link-linha-2">Contratações</div>                                
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                        <a href="" target="_blank"  class="card card-link">
+                                            <div class="nome-link link-linha-3">Retorno<br>Financiamentos</div>                                
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- linha 3 -->
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        
+                            <div class="portlet estrutura-sufug-anchor">
+                                <div class="portlet-title">
+                                    <i class="fa fa-users"></i> ESTRUTURA
+                                </div>
+
+                                <div class="portlet-body">
+                                    <div class="cards-terceira-linha"></div>
+                                    <div id="detalhesTerceiraLinha"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Links -->                        
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                            <div class='portlet indicadores-anchor'>
+
+                                <div class="portlet-title">
+                                    <i class="fa fa-file-pdf-o"></i> INDICADORES
+                                </div>
+
+                                <div class="portlet-body">
+                                    
+                                    <!--<div class="list-group">-->
+                                    <div class="list-group grupo-lista">
+                                        <a href="" target="_blank" class="list-group-item">Item 1</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 2</a>
+                                        <h4>Desempenho das Filiais</h4>
+                                        <a href="" target="_blank" class="list-group-item">Item 3</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 4</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 5</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 6</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 7</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 8</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                            <div class='portlet'>
+
+                                <div class="portlet-title">
+                                    <i class="fa fa-file-pdf-o"></i> RELATÓRIOS
+                                </div>
+
+                                <div class="portlet-body">
+                                    <!--<div class="list-group">-->
+                                    <div class="list-group grupo-lista">
+                                        <a href="" target="_blank" class="list-group-item">Item 1</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 2</a>
+                                        <h4>Desempenho das Filiais</h4>
+                                        <a href="" target="_blank" class="list-group-item">Item 3</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 4</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 5</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 6</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 7</a>
+                                        <a href="" target="_blank" class="list-group-item">Item 8</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        &nbsp;
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+                © CEOPC.SISTEMAS <small>- VICOP / DECOP / GEOPC / CEOPC</small>
+        </footer>
+
+        <script src="assets/third-party/jquery/jquery.min.js?v=<?=filemtime('assets/third-party/jquery/jquery.min.js')?>"></script>
+        <!-- <script src="assets/third-party/bootstrap/js/bootstrap.min.js?v=<?=filemtime('assets/third-party/bootstrap/js/bootstrap.min.js')?>"></script> -->
+        <script type="text/javascript" src="assets/third-party/bootstrap4/js/bootstrap.min.js"></script>
+        <script src="assets/third-party/numeral/numeral.min.js?v=<?=filemtime('assets/third-party/numeral/numeral.min.js')?>"></script>
+        <script src="assets/third-party/numeral/locales/pt-br.min.js?v=<?=filemtime('assets/third-party/numeral/locales/pt-br.min.js')?>"></script>
+        <script src="assets/third-party/countUp/countUp.min.js?v=<?=filemtime('assets/third-party/countUp/countUp.min.js')?>"></script>
+        <script src="assets/third-party/ChartJs/Chart.min.js?v=<?=filemtime('assets/third-party/ChartJs/Chart.min.js')?>"></script>
+
+        <script src="assets/js/shared/dependencyInjection.js?v=<?=filemtime('assets/js/shared/dependencyInjection.js')?>"></script>
+        <script src="assets/js/shared/site.js?v=<?=filemtime('assets/js/shared/site.js')?>"></script>
+        <script src="assets/js/shared/spinner.js?v=<?=filemtime('assets/js/shared/spinner.js')?>"></script>
+        <script src="assets/js/shared/breadcrumb.js?v=<?=filemtime('assets/js/shared/breadcrumb.js')?>"></script>
+        <script src="assets/js/painel/index.js?v=<?=filemtime('assets/js/painel/index.js')?>"></script>
+
+        <script>
+            var site = new Site();
+        </script>
+
+    </body>
+
+</html>

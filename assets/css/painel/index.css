@@ -1,0 +1,145 @@
+.card {
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 25px;
+    overflow: hidden;
+    color: #fff;
+    height: 120px;
+    position: relative
+}
+
+.card:hover,
+.card:active,
+.card:focus,
+.card:visited
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-roxo { background-color: #8E44AD; }
+.card-verde-claro { background-color: #32C5D2; }
+.card-verde { background-color: #26c281; }
+.card-azul { background-color: #3598DC; }
+.card-vermelho { background-color: #E7505A; }
+.card-amarelo { background-color: #FBBE27 }
+
+.card .visual {
+    display: block;
+    float: left;
+    font-size: 35px;
+    height: 80px;
+    line-height: 35px;
+    padding-left: 15px;
+    padding-top: 35px;
+    width: 80px;
+}
+
+.card .visual i {
+    color: #ffffff;
+    opacity: 0.1;
+    font-size: 110px;
+    line-height: 110px;
+    margin-left: -35px;
+}
+
+.card .detalhe {
+    padding-right: 15px;
+    position: absolute;
+    right: 15px;
+}
+
+.card .detalhe .numero {
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-top: 25px;    
+    text-align: right;
+}
+
+.card .detalhe .descricao {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card .detalhe .data-referencia {
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.container-grafico{
+    position: relative;
+    min-height: 250px!important;
+}
+
+.grupo-lista a {
+	margin-bottom:0.3em;
+}
+
+.grupo-lista h4{
+	padding-left: 0em;
+	margin-top: 20px;
+	font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-link {
+	display: table;
+	width: 100%;
+	position: relative;
+    background: #7abcff;
+	background: linear-gradient(to bottom,  #f58f60 0%,#f18035 44%,#c45b05 100%);
+}
+
+.card-link  .nome-link {
+    display: table-cell;
+	vertical-align: middle;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -1px;
+	margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.conteudo-dados {
+    display: none;
+}
+
+.painel-detalhes{
+    display: none;
+}
+
+.table > thead > tr > th{
+    vertical-align: middle;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 2px;
+}
+
+.titulo-tabela-contratacoes{
+    font-size: 16px;
+    color: #999;
+}
+
+@media screen and (max-width: 320px) {
+
+    span.tabelaPrimeiraLinha th, td { 
+        font-size: 10px;
+    }
+
+}
